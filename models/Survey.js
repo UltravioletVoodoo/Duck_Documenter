@@ -1,6 +1,10 @@
 const mongoose = require('mongoose')
 
 const SurveySchema = new mongoose.Schema({
+    date: {
+        type: String,
+        required: [true, 'Date is required']
+    },
     time: {
         type: String,
         required: [true, 'Time is required']
