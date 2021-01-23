@@ -1,4 +1,5 @@
 import download from "../utils/download"
+import Background from "../components/background";
 
 
 export default function Admin({ surveys }) {
@@ -22,11 +23,66 @@ export default function Admin({ surveys }) {
 
     return (
         <>
-            <p>Admin page</p>
-            <h1>Total Responses: {surveys.length}</h1>
-            <h1>Responses:</h1>
-            <p>{JSON.stringify(surveys)}</p>
-            <button onClick={downloadCSV}>Download</button>
+            <Background />
+            <div className='adminContainer'>
+                <div className='adminText responsesHeader'>Total Responses:</div>
+                <div className='adminText responsesNumber'>{surveys.length}</div>
+                <div className='downloadButtonContainer'>
+                    <button className='downloadButton' onClick={downloadCSV}>
+                        <div className='downloadButtonText'>Download</div>
+                    </button>
+                </div>
+            </div>
+            <style jsx>{`
+                .adminContainer {
+                    position: fixed;
+                    width: 500px;
+                    height: 300px;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%, -50%);
+                    background-color: white;
+                    box-shadow: 0 0 50px 1px black;
+                }
+                .adminText {
+                    font-family: helvetica;
+                    font-weight: bold;
+                    position: relative;
+                    width: 100%;
+                    text-align: center;
+                    padding-top: 15px;
+                }
+                .responsesHeader {
+                    font-size: 34px;
+                }
+                .responsesNumber {
+                    font-size: 150px;
+                }
+                .downloadButtonContainer {
+                    position: relative;
+                    width: 100px;
+                    height: 35px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+                .downloadButton {
+                    position: relative;
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 10px;
+                    background-color: white;
+                    transition: 0.2s;
+                    cursor: pointer;
+                }
+                .downloadButton:hover {
+                    background-color: darkgray;
+                }
+                .downloadButtonText {
+                    font-size: 16px;
+                    font-family: helvetica;
+                    font-weight: bold;
+                }
+            `}</style>
         </>
     )
 }

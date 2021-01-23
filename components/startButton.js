@@ -15,11 +15,11 @@ export default function StartButton() {
                     width: 100%;
                     height: 100%;
                     text-decoration: none;
-                    color: darkgray;
-                    background-color: brown;
+                    color: white;
+                    background-color: gray;
                     transition: 0.4s;
                     text-align: center;
-                    border-radius: 1em;
+                    border-radius: 8px;
                     opacity: 0.7;
                 }
                 .startButton:hover {
@@ -30,6 +30,7 @@ export default function StartButton() {
                     top: 50%;
                     transform: translateY(-50%);
                     font-size: 24px;
+                    font-family: helvetica;
                 }
             `}</style>
         </>

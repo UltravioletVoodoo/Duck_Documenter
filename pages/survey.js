@@ -158,34 +158,45 @@ export default function Survey() {
                     width: 100%;
                     margin-bottom: 10px;
                     background-color: white;
+                    padding-top: 10px;
+                    box-shadow: 0 0 50px 1px black;
                 }
                 .largeInputContainer {
+                    padding-top: 10px;
                     position: relative;
                     width: 100%;
                     margin-bottom: 10px;
                     padding: 10px 0 10px 0;
                     background-color: white;
+                    box-shadow: 0 0 50px 1px black;
                 }
                 .inputTitle {
                     position: relative;
                     width: 100%;
                     text-align: center;
                     font-size: 18px;
+                    font-weight: bold;
+                    font-family: helvetica;
                 }
                 .inputDescription {
                     position: relative;
                     width: 100%;
                     text-align: center;
+                    font-family: helvetica;
                 }
                 .smallInput {
                     position: relative;
                     width: 80%;
-                    left: 10%
+                    border: 2px solid black;
+                    left: 10%;
+                    margin-top: 10px;
                 }
                 .largeInput {
                     position: relative;
                     width: 80%;
                     height: 150px;
+                    border: 2px solid black;
+                    margin-top: 10px;
                     resize: none;
                     left: 10%;
                 }

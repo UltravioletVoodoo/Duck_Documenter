@@ -24,6 +24,7 @@ export default function Index() {
                     top: 15%;
                     transform: translate(-50%, -50%);
                     z-index: 2;
+                    font-family: helvetica;
 
                 }
                 .indexContainer {
@@ -45,7 +46,7 @@ export default function Index() {
                 .buttonContainer {
                     position: absolute;
                     width: 150px;
-                    height: 100px;
+                    height: 35px;
                     left: 50%;
                     top: 50%;
                     transform: translate(-50%, -50%);
